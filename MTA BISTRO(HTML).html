@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTA Bistro- Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="MTA BISTRO.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MTA Bistro</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to MTA Bistro</h1>
+            <p class="hero-subtitle">Experience culinary excellence in an atmosphere of refined elegance</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="openReservation()">Make Reservation</button>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Fine dining restaurant interior">
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Crafted with passion, served with pride</p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="appetizers">Appetizers</button>
+                <button class="filter-btn" data-filter="mains">Main Courses</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Beverages</button>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item" data-category="appetizers">
+                    <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bruschetta">
+                    <div class="menu-item-content">
+                        <h3>Truffle Bruschetta</h3>
+                        <p>Artisanal bread topped with truffle oil, fresh tomatoes, and basil</p>
+                        <span class="price">$18</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="appetizers">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Seafood">
+                    <div class="menu-item-content">
+                        <h3>Pan-Seared Scallops</h3>
+                        <p>Fresh scallops with cauliflower purée and pancetta crisps</p>
+                        <span class="price">$24</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Steak">
+                    <div class="menu-item-content">
+                        <h3>Wagyu Beef Tenderloin</h3>
+                        <p>Premium wagyu with roasted vegetables and red wine reduction</p>
+                        <span class="price">$58</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="https://images.pexels.com/photos/725997/pexels-photo-725997.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Salmon">
+                    <div class="menu-item-content">
+                        <h3>Atlantic Salmon</h3>
+                        <p>Herb-crusted salmon with quinoa pilaf and lemon butter sauce</p>
+                        <span class="price">$42</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <img src="https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pasta">
+                    <div class="menu-item-content">
+                        <h3>Lobster Ravioli</h3>
+                        <p>Handmade pasta filled with fresh lobster in saffron cream sauce</p>
+                        <span class="price">$36</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chocolate dessert">
+                    <div class="menu-item-content">
+                        <h3>Dark Chocolate Soufflé</h3>
+                        <p>Rich chocolate soufflé with vanilla bean ice cream</p>
+                        <span class="price">$16</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <img src="https://images.pexels.com/photos/227432/pexels-photo-227432.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tiramisu">
+                    <div class="menu-item-content">
+                        <h3>Classic Tiramisu</h3>
+                        <p>Traditional Italian dessert with espresso and mascarpone</p>
+                        <span class="price">$12</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <img src="https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wine">
+                    <div class="menu-item-content">
+                        <h3>Bordeaux Wine Selection</h3>
+                        <p>Curated selection of premium French wines</p>
+                        <span class="price">$15-85</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>At Bella Vista, we believe that dining is more than just a meal—it's an experience that engages all your senses. Founded in 2015 by renowned chef Marco Antonelli, our restaurant has become a destination for food lovers seeking exceptional cuisine in an elegant atmosphere.</p>
+                    <p>Our philosophy centers around using the finest locally-sourced ingredients, preparing each dish with meticulous attention to detail, and creating memorable moments for every guest who walks through our doors.</p>
+                    <div class="chef-info">
+                        <h3>Chef Marco Antonelli</h3>
+                        <p>With over 20 years of culinary experience in Michelin-starred restaurants across Europe, Chef Marco brings his passion for authentic flavors and innovative techniques to every plate.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chef in kitchen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>A glimpse into our culinary artistry</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Plated dish">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Restaurant ambiance">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Wine selection">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fine dining setup">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Signature dish">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Dessert presentation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>123 Culinary Boulevard<br>Gourmet District, GD 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>info@MTA Bistro.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Hours</h3>
+                        <p>Tuesday - Sunday: 5:00 PM - 11:00 PM<br>Monday: Closed</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Modal -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Make a Reservation</h2>
+            <form id="reservation-form">
+                <div class="form-group">
+                    <label for="res-name">Name</label>
+                    <input type="text" id="res-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-email">Email</label>
+                    <input type="email" id="res-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-phone">Phone</label>
+                    <input type="tel" id="res-phone" name="phone" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res-date">Date</label>
+                        <input type="date" id="res-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-time">Time</label>
+                        <select id="res-time" name="time" required>
+                            <option value="">Select Time</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="res-guests">Number of Guests</label>
+                    <select id="res-guests" name="guests" required>
+                        <option value="">Select Guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7">7 Guests</option>
+                        <option value="8">8 Guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="res-special">Special Requests</label>
+                    <textarea id="res-special" name="special" placeholder="Dietary restrictions, celebrations, etc." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MTA Bistro</h3>
+                    <p>Fine dining experience in the heart of the city.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>123 Culinary Boulevard<br>Gourmet District, GD 12345<br>(555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MTA Bistro Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="MTA BISTRO.js"></script>
+</body>
+</html>
